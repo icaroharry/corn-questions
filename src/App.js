@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import QuestionListPage from "./pages/QuestionListPage";
+import NewQuestionPage from "./pages/NewQuestionPage";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <main className="App">
+        <h1>Corn Questions</h1>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/new-question" component={NewQuestionPage} />
+            <Route path="/" component={QuestionListPage} />
+          </Switch>
+        </BrowserRouter>
+      </main>
+    );
+  }
 }
 
 export default App;
