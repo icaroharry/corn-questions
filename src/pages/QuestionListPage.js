@@ -27,10 +27,12 @@ class QuestionListPage extends React.Component {
   render() {
     const { questions } = this.state;
     return (
-      <QuestionList questions={questions} />
+      <>
+        <QuestionList questions={questions} />
+        <button onClick={() => this.props.history.push('/new-question')}>Nova Pergunta</button>
+      </>
     );
   }
 }
-// comparar o Virtual DOM com o DOM real
 
 export default QuestionListPage;

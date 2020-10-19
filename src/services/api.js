@@ -11,7 +11,7 @@ export const getQuestions = () => (
     setTimeout(() => {
       const questions = readQuestions();
       resolve(questions);
-    }, 2000);
+    }, 1000);
   })
 );
 
