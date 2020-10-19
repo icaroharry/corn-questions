@@ -1,6 +1,5 @@
 import React from 'react';
 import { createQuestion } from '../services/api';
-import { Redirect } from 'react-router-dom';
 
 class NewQuestionPage extends React.Component {
   constructor() {

@@ -11,7 +11,7 @@ export const getQuestions = () => (
     setTimeout(() => {
       const questions = readQuestions();
       resolve(questions);
-    }, 1000);
+    }, 100);
   })
 );
 
@@ -28,7 +28,7 @@ export const archiveQuestion = (archive) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve('OK');
-    }, 1000);
+    }, 100);
   });
 };
 
@@ -42,7 +42,7 @@ export const createQuestion = (questionData) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve('OK');
-    }, 1000);
+    }, 100);
   });
 };
 
