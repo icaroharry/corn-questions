@@ -13,14 +13,14 @@ class QuestionListPage extends React.Component {
     super();
 
     this.state = {
-      questions: []
+      questions: [],
     }
   }
 
   async componentDidMount() {
     const questions = await getQuestions();
     this.setState({
-      questions
+      questions,
     });
   }
 
@@ -31,5 +31,6 @@ class QuestionListPage extends React.Component {
     );
   }
 }
+// comparar o Virtual DOM com o DOM real
 
 export default QuestionListPage;
